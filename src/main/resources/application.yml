@@ -1,0 +1,9 @@
+server:
+  port: 5555
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    organizationservice: /organization/**
+    licensingservice: /licensing/**
+  sensitive-headers: Cookie, Set-Cookie
